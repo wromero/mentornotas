@@ -1,0 +1,14 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_driver: pdo_pgsql
+    database_host: 127.0.0.1
+    database_port: '5432'
+    database_name: mentornotas
+    database_user: wilber
+    database_password: wilber
+    mailer_transport: gmail
+    mailer_host: null
+    mailer_user: willy.romero
+    mailer_password: null
+    locale: en
+    secret: 179506f69d64f334a7362573cc441d095b953f8f

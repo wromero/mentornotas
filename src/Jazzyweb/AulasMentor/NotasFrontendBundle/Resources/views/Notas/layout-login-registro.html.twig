@@ -1,0 +1,23 @@
+{% extends '::base.html.twig' %}
+
+ {% block stylesheets%}
+ <link href="{{ asset('bundles/jamnotasfrontend/vendors/jquery/css/ui-lightness/jquery-ui-1.8.17.custom.css') }}" type="text/css" rel="stylesheet" />
+ <link href="{{ asset('bundles/jamnotasfrontend/css/mentornotas.css') }}" type="text/css" rel="stylesheet" />
+ {% endblock%}
+
+ {% block javascripts %}
+
+ {% endblock %}
+
+ {% block body %}
+     <div id="mentornotas-wrapper">
+          {% block wrapper %}
+             
+          {% endblock %}         
+     </div>
+     {% include 'JAMNotasFrontendBundle:Login:login.html.twig' %}
+
+     {% include 'JAMNotasFrontendBundle:Login:registro.html.twig' %}
+
+
+ {% endblock %}

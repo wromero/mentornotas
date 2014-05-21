@@ -1,0 +1,51 @@
+{% extends 'JAMNotasFrontendBundle:Notas:layout-login-registro.html.twig' %}
+
+ {% block body %}
+     
+    
+     {% block wrapper %}
+              <div id="mentornotas-header">
+                   <div style="float: left;">
+                    <a href="">
+                        <img src="{{ asset('bundles/jamnotasfrontend/images/mentor.png')}}" alt="mentornotas"/>
+                    </a>
+                </div>
+                <div style="text-align: center; font-style: italic">
+                    <h1>MentorNotas</h1>
+                    <h2>tu block de notas inteligente</h2>
+                </div>
+                    
+                   
+              </div>
+                    <div class="mentornotas-content-login">
+                        
+                   
+    <h1>Login</h1>
+     {% if error %}
+         <div class="error">{{ error.message }}</div>
+     {% endif %}
+
+     <form action="{{ path("jamn_login_check") }}" method="post" id="login">
+         <div>
+             <label for="username">Username</label>
+             <input type="text" id="username" name="_username"
+              value="{{ last_username }}" />
+         </div>
+
+         <div>
+             <label for="password">Password</label>
+             <input type="password" id="password" name="_password" />
+         </div>
+
+         <input type="submit" class="symfony-button-grey" value="LOGIN" />
+     </form>
+  
+                                           
+                    </div>
+          <ul id="menu">
+                <li>¿Aún no tienes una cuenta? <a href="{{ path("jamn_registro") }}">¡Registrate!</a></li>
+            </ul>
+          {% endblock %} 
+
+   {% endblock %}   
+
